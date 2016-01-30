@@ -73,11 +73,11 @@ elif ! test -x $MULTISTRAP; then
 # Everything right, configure remaining variables
 else
     # Delete previous files and configure new one
-    rm -r $DISTRO.$DEVICE* 2>/dev/null
-    LOGFILE=$DISTRO.$DEVICE.log
-    CONFIG=$DISTRO.$DEVICE.conf
-    TARGET=$DISTRO.$DEVICE
-    cp multistrap/$CONFIG . && rm $LOGFILE &>/dev/null
+    mkdir -p targets; rm -r targets/$DISTRO.$DEVICE* 2>/dev/null
+    LOGFILE=targets/$DISTRO.$DEVICE.log
+    CONFIG=targets/$DISTRO.$DEVICE.conf
+    TARGET=targets/$DISTRO.$DEVICE
+    cp multistrap/$DISTRO.$DEVICE.conf targets/ && rm $LOGFILE &>/dev/null
     # Adding new packages to multistrap configuration file
     test -z $4 || echo "packages=$PACKAGES" >> $CONFIG
 fi
