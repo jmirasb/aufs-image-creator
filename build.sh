@@ -129,7 +129,7 @@ create_image() {
 # Main, build and configure image
 echo
 echo -e "${INFO} Welcome to Multistrap image creator SDK ${NORM}"
-echo -e "${INFO} Execute tail -f logs/mkrootfs-$DEVICE.log in another terminal to see verbose process ${NORM}"
+echo -e "${INFO} Execute tail -f $LOGFILE in another terminal to see verbose process ${NORM}"
 echo -e "${INFO} and don't forget configure root password (by default root) and users in new image${NORM}"
 echo
 
