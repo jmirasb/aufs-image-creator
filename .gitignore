@@ -1,4 +1,2 @@
 mnt/
-debian*
-raspian*
-ubuntu*
+targets/
