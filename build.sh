@@ -73,7 +73,7 @@ elif ! test -x $MULTISTRAP; then
 # Everything right, configure remaining variables
 else
     # Delete previous files and configure new one
-    rm -r $DISTRO.$DEVICE*
+    rm -r $DISTRO.$DEVICE* 2>/dev/null
     LOGFILE=$DISTRO.$DEVICE.log
     CONFIG=$DISTRO.$DEVICE.conf
     TARGET=$DISTRO.$DEVICE
